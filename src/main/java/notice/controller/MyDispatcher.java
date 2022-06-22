@@ -16,6 +16,9 @@ import notice.controller.customer.NoticeEditController;
 import notice.controller.customer.NoticeEditProcController;
 import notice.controller.customer.NoticeRegController;
 import notice.controller.customer.NoticeRegProcController;
+import notice.controller.joinus.LoginController;
+import notice.controller.joinus.LoginProcController;
+import notice.controller.joinus.LogoutProcController;
 
 public class MyDispatcher extends HttpServlet{
 	
@@ -50,7 +53,13 @@ public class MyDispatcher extends HttpServlet{
 				controller=new NoticeDelProcController();
 			}else if(com.equals("/customer/notice.do")) {
 				controller=new NoticeController();
-			}				
+			}else if(com.equals("/login/login.do")) {
+				controller=(Controller) new LoginController();
+			}else if(com.equals("/login/loginProc.do")) {
+				controller=(Controller) new LoginProcController();
+			}else if(com.equals("/login/logoutproc.do")) {
+				controller=(Controller) new LogoutProcController();
+			}								
 			controller.execute(request, response);
 		}catch(Exception e) {
 			e.printStackTrace();
