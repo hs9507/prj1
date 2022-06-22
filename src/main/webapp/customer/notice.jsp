@@ -10,6 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>notice</title>
+<hr />
 </head>
 <body>
 <h3><a href="notice.do">notice</a></h3>
