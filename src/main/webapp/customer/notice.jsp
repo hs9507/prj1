@@ -20,6 +20,21 @@
 		
 	}
 </script>
+<!-- 세션을 이용한 조건문 -->
+<c:if test="${empty sessionScope.uid }"> <!-- uid가 없으면 true -->
+	<a href="../login/login.do">login</a> |
+	<a href="#">join</a>
+</c:if>
+
+<c:if test="${not empty sessionScope.uid }"> <!-- login이 되어있다면 true -->
+	<a href="../login/logoutproc.do">logout</a>
+</c:if>
+
+<br />
+<c:if test="${not empty sessionScope.uid }"> ${sessionScope.uid }님 ㅎㅇ
+</c:if>
+<hr />
+
 <form action="notice.do" method="get">
 	<select name="f" >
 		<option ${param.f=="title"?"selected":"" } value="title">제목</option>
