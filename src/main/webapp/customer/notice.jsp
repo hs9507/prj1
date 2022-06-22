@@ -65,6 +65,8 @@
 	</c:forEach>
 	
 </table>
+<c:if test="${not empty sessionScope.uid }">
 <a href="noticeReg.do">write</a>
+</c:if>
 </body>
 </html>

@@ -38,7 +38,7 @@ function goJoinForm() {
 
 
 <div id="wrap">
-	<form action="loginproc.jsp" name="logininfo" method="post" onsubmit="return checkValue()">
+	<form action="loginProc.do" name="logininfo" method="post" onsubmit="return checkValue()">
 		<img src="../img/welcome.jpg" id="wel.img" />
 		<br /><br />
 		<table>
