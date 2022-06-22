@@ -12,7 +12,7 @@ request.setCharacterEncoding("utf-8");
 </head>
 <body>
 <h3>join</h3>
-<form action="joinProc.jsp">
+<form action="joinProc.do">
 	<p style="color:red;">
 	<%
 	if(request.getAttribute("errors")!=null){ //errors존재한다.
